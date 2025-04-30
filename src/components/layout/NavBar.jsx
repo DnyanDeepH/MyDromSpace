@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/ui/button';
 import { useAuth } from '../../contexts/AuthContext';
 import { Menu, X } from 'lucide-react';
+import logo from '/favicon.ico';
 
 const NavBar = () => {
   const { isAuthenticated, userType, logout } = useAuth();
@@ -18,7 +19,8 @@ const NavBar = () => {
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="bg-dorm-600 text-white font-bold rounded-md p-1"></div>
+          <img src={logo} alt="MyDromSpace Logo" className="h-8 w-auto" />
+{/*           <div className="bg-dorm-600 text-white font-bold rounded-md p-1"></div> */}
           <span className="text-xl font-bold text-dorm-800">MyDromSpace</span>
         </Link>
 
